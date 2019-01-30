@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C4EC9222201162500ACFA42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4EC9212201162500ACFA42 /* AppDelegate.swift */; };
 		0C4EC9242201162500ACFA42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4EC9232201162500ACFA42 /* ViewController.swift */; };
-		0C4EC9272201162500ACFA42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C4EC9252201162500ACFA42 /* Main.storyboard */; };
+		0C4EC9272201162500ACFA42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C4EC9252201162500ACFA42 /* Main.storyboard */; settings = {ASSET_TAGS = (1, 2, 3, 4, ); }; };
 		0C4EC9292201162600ACFA42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C4EC9282201162600ACFA42 /* Assets.xcassets */; };
 		0C4EC92C2201162600ACFA42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C4EC92A2201162600ACFA42 /* LaunchScreen.storyboard */; };
 		0C4EC9372201162600ACFA42 /* lifecounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4EC9362201162600ACFA42 /* lifecounterTests.swift */; };
@@ -187,6 +187,12 @@
 		0C4EC9162201162400ACFA42 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+					2,
+					3,
+					4,
+				);
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = iSchool;
