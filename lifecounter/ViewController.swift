@@ -60,6 +60,41 @@ class ViewController: UIViewController {
     @IBOutlet weak var n7: UIButton!
     @IBOutlet weak var n8: UIButton!
     
+
+    @IBOutlet weak var h1: UILabel!
+    @IBOutlet weak var h2: UILabel!
+    @IBOutlet weak var h3: UILabel!
+    @IBOutlet weak var h4: UILabel!
+    @IBOutlet weak var h5: UILabel!
+    @IBOutlet weak var h6: UILabel!
+    @IBOutlet weak var h7: UILabel!
+    @IBOutlet weak var h8: UILabel!
+    @IBOutlet weak var historyButton: UIBarButtonItem!
+    @IBOutlet weak var historyTable: UIView!
+    
+    
+    var history = false
+    var hList : [String] = ["New Game"]
+    @IBAction func showHistory(_ sender: UIBarButtonItem) {
+        if (history) {
+            historyTable.isHidden = true
+            historyButton.title = "Show History"
+        } else {
+            var dict : [Int: UILabel] = [0: h1, 1: h2, 2: h3, 3: h4, 4: h5, 5: h6, 6: h7, 7: h8]
+            var iterate = 0
+            if (hList.count > 8) {
+                iterate = 8
+            } else {
+                iterate = hList.count
+            }
+            for i in 0...iterate - 1 {
+                dict[i]!.text = hList[hList.count - 1 - i]
+            }
+            historyTable.isHidden = false
+            historyButton.title = "Hide History"
+        }
+        history = !history
+    }
     
     func checkLoss(_ score: Int, name: String) {
         if (score <= 0) {
@@ -84,6 +119,7 @@ class ViewController: UIViewController {
             self.p8 = 20
             self.loser.isHidden = false
             self.loser.text = "\(name) has lost!"
+            hList.append("\(name) has lost!")
         }
     }
     
@@ -166,99 +202,131 @@ class ViewController: UIViewController {
             case 1: p1 += 1
                 self.player1.text = String(p1)
                 checkLoss(p1, name: "Player 1")
+                hList.append("Player 1 gained 1 life")
             case 2: p2 += 1
                 self.player2.text = String(p2)
                 checkLoss(p2, name: "Player 2")
+                hList.append("Player 2 gained 1 life")
             case 3: p3 += 1
                 self.player3.text = String(p3)
                 checkLoss(p3, name: "Player 3")
+                hList.append("Player 3 gained 1 life")
             case 4: p4 += 1
                 self.player4.text = String(p4)
                 checkLoss(p4, name: "Player 4")
+                hList.append("Player 4 gained 1 life")
             case 5: p1 += superhit
                 self.player1.text = String(p1)
                 checkLoss(p1, name: "Player 1")
+                hList.append("Player 1 gained \(superhit) life")
             case 6: p2 += superhit
                 self.player2.text = String(p2)
                 checkLoss(p2, name: "Player 2")
+                hList.append("Player 2 gained \(superhit) life")
             case 7: p3 += superhit
                 self.player3.text = String(p3)
                 checkLoss(p3, name: "Player 3")
+                hList.append("Player 3 gained \(superhit) life")
             case 8: p4 += superhit
                 self.player4.text = String(p4)
                 checkLoss(p4, name: "Player 4")
+                hList.append("Player 4 gained \(superhit) life")
             case 9: p1 -= 1
                 self.player1.text = String(p1)
                 checkLoss(p1, name: "Player 1")
+                hList.append("Player 1 lost 1 life")
             case 10: p2 -= 1
                 self.player2.text = String(p2)
                 checkLoss(p2, name: "Player 2")
+                hList.append("Player 2 lost 1 life")
             case 11: p3 -= 1
                 self.player3.text = String(p3)
                 checkLoss(p3, name: "Player 3")
+                hList.append("Player 3 lost 1 life")
             case 12: p4 -= 1
                 self.player4.text = String(p4)
                 checkLoss(p4, name: "Player 4")
+                hList.append("Player 4 lost 1 life")
             case 13: p1 -= superhit
                 self.player1.text = String(p1)
                 checkLoss(p1, name: "Player 1")
+                hList.append("Player 1 lost \(superhit) life")
             case 14: p2 -= superhit
                 self.player2.text = String(p2)
                 checkLoss(p2, name: "Player 2")
+                hList.append("Player 2 lost \(superhit) life")
             case 15: p3 -= superhit
                 self.player3.text = String(p3)
                 checkLoss(p3, name: "Player 3")
+                hList.append("Player 3 lost \(superhit) life")
             case 16: p4 -= superhit
                 self.player4.text = String(p4)
                 checkLoss(p4, name: "Player 4")
+                hList.append("Player 4 lost \(superhit) life")
             case 17: p5 += 1
                 self.player5.text = String(p5)
                 checkLoss(p5, name: "Player 5")
+                hList.append("Player 5 gained 1 life")
             case 18: p6 += 1
                 self.player6.text = String(p6)
                 checkLoss(p6, name: "Player 6")
+                hList.append("Player 6 gained 1 life")
             case 19: p7 += 1
                 self.player7.text = String(p7)
                 checkLoss(p7, name: "Player 7")
+                hList.append("Player 7 gained 1 life")
             case 20: p8 += 1
                 self.player8.text = String(p8)
                 checkLoss(p8, name: "Player 8")
+                hList.append("Player 8 gained 1 life")
             case 21: p5 += superhit
-                self.player5.text = String(p5)
+                self.player5.text = String(superhit)
                 checkLoss(p5, name: "Player 5")
+                hList.append("Player 5 gained \(superhit) life")
             case 22: p6 += superhit
                 self.player6.text = String(p6)
                 checkLoss(p6, name: "Player 6")
+                hList.append("Player 6 gained \(superhit) life")
             case 23: p7 += superhit
                 self.player7.text = String(p7)
                 checkLoss(p7, name: "Player 7")
+                hList.append("Player 7 gained \(superhit) life")
             case 24: p8 += superhit
                 self.player8.text = String(p8)
                 checkLoss(p8, name: "Player 8")
+                hList.append("Player 8 gained \(superhit) life")
             case 25: p5 -= 1
                 self.player5.text = String(p5)
                 checkLoss(p5, name: "Player 5")
+                hList.append("Player 5 lost 1 life")
             case 26: p6 -= 1
                 self.player6.text = String(p6)
                 checkLoss(p6, name: "Player 6")
+                hList.append("Player 6 lost 1 life")
             case 27: p7 -= 1
                 self.player7.text = String(p7)
                 checkLoss(p7, name: "Player 7")
+                hList.append("Player 7 lost 1 life")
             case 28: p8 -= 1
                 self.player8.text = String(p8)
                 checkLoss(p8, name: "Player 8")
+                hList.append("Player 8 lost 1 life")
             case 29: p5 -= superhit
                 self.player5.text = String(p5)
                 checkLoss(p5, name: "Player 5")
+                hList.append("Player 5 lost \(superhit) life")
             case 30: p6 -= superhit
                 self.player6.text = String(p6)
                 checkLoss(p6, name: "Player 6")
+                hList.append("Player 6 lost \(superhit) life")
             case 31: p7 -= superhit
                 self.player7.text = String(p7)
                 checkLoss(p7, name: "Player 7")
+                hList.append("Player 7 lost \(superhit) life")
             case 32: p8 -= superhit
                 self.player8.text = String(p8)
                 checkLoss(p8, name: "Player 8")
+                hList.append("Player 8 lost \(superhit) life")
             default:
                 return
         }

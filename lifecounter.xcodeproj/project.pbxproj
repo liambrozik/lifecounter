@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C163718220405D800852369 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C163716220405D800852369 /* Main.storyboard */; };
+		0C16371A2204F72400852369 /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1637192204F72400852369 /* secondViewController.swift */; };
 		0C4EC9222201162500ACFA42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4EC9212201162500ACFA42 /* AppDelegate.swift */; };
 		0C4EC9242201162500ACFA42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4EC9232201162500ACFA42 /* ViewController.swift */; };
 		0C4EC9292201162600ACFA42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C4EC9282201162600ACFA42 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		0C163717220405D800852369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0C1637192204F72400852369 /* secondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
 		0C4EC91E2201162400ACFA42 /* lifecounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lifecounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4EC9212201162500ACFA42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C4EC9232201162500ACFA42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				0C4EC9282201162600ACFA42 /* Assets.xcassets */,
 				0C4EC92A2201162600ACFA42 /* LaunchScreen.storyboard */,
 				0C4EC92D2201162600ACFA42 /* Info.plist */,
+				0C1637192204F72400852369 /* secondViewController.swift */,
 			);
 			path = lifecounter;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C4EC9242201162500ACFA42 /* ViewController.swift in Sources */,
+				0C16371A2204F72400852369 /* secondViewController.swift in Sources */,
 				0C4EC9222201162500ACFA42 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
